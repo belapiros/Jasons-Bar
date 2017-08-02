@@ -60,6 +60,7 @@
       background-size: cover;
       background-position: 30% 0%;
       text-align: center;
+      position: relative;
     }
     #header_container > h1, #header_container > h2, #header_container > h3, #header_container  i {
       color: #fff;
