@@ -243,7 +243,7 @@
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
     .menu_item {
-      display: inline-block;
+      list-style: none;
     }
     #menu a {
       font-size: 30px;
@@ -280,17 +280,17 @@
       display: flex;
       justify-content: center;
     }
-    nav > ul > a {
+    nav > ul a {
       font-size: calc(12px + 4 * (100vw - 500px) / 1000);
       margin-left: 4vw;
       text-transform: uppercase;
       align-self: center;
       border-bottom: 2px solid  transparent;
     }
-    nav > ul > a:first-child {
+    nav > ul > li:first-child {
       margin-left: 0;
     }
-    nav > ul > a:hover, nav > ul > a:focus, nav > ul > a:active {
+    nav > ul a:hover, nav > ul a:focus, nav > ul a:active {
       border-bottom: 2px solid  #666;
     }
     #navigation {
@@ -313,26 +313,26 @@
       background-image: url('../img/about.png');
       background-size: 100% 100%;
     }
-    #about_jasons > h1, #about_jasons > h2 {
+    #about_jasons > h2, #about_jasons > h3 {
       color: #333;
       text-align: left;
     }
-    #about_jasons > h1, #about_jasons > h2, #about_jasons > p {
+    #about_jasons > h2, #about_jasons > h3, #about_jasons > p {
       margin-left: 10vw;
       margin-right: 10vw;
     }
-    #about_jasons > h1 {
+    #about_jasons > h2 {
       font-size: 2.5vw;
       margin-top: 8%;
     }
-    #about_jasons > h1 > span {
+    #about_jasons > h2 > span {
       font-size: 2vw;
       vertical-align: text-top;
       margin-left: 0.5vw;
       color: #808080;
       text-decoration: underline;
     }
-    #about_jasons > h2 {
+    #about_jasons > h3 {
       font-size: 2vw;
       margin-top: 2.3vw;
     }
@@ -358,19 +358,19 @@
       flex-flow: column;
       justify-content: center;
     }
-    #text_bg:hover > h1 > a {
+    #text_bg:hover > h2 > a {
       transition: color 400ms;
       color: #666;
     }
-    #text_bg:hover > h1 > a > i {
+    #text_bg:hover > h2 > a > i {
       transition: margin-right 400ms;
       margin-right: 0.5vw;
     }
-    #text_bg > h1 {
+    #text_bg > h2 {
       font-size: 1.3vw;
       margin-left: 1.5vw;
     }
-    #text_bg > h1 > a > i {
+    #text_bg > h2 > a > i {
       margin-right: 1vw;
     }
     #food_menus_picture {
@@ -382,12 +382,12 @@
       display: flex;
       justify-content: center;
     }
-    #food_menus_picture > h1 {
+    #food_menus_picture > h2 {
       font-size: 2.4vw;
       margin-top: 3vw;
       color: #fff;
     }
-    #food_menus_picture > h1 > span {
+    #food_menus_picture > h2 > span {
       font-size: 2vw;
       vertical-align: text-top;
       margin-left: 0.3vw;
@@ -414,28 +414,22 @@
       margin-top: 3.6vw;
       color: #666;
     }
-    .menu > h1, .menu > h2, .menu > h3, .menu > p {
+    .menu > h2, .menu > h3, .menu > p {
       margin-left: 8%;
       margin-right: 8%;
     }
-    .menu > h2, .menu > p {
+    .menu > h3, .menu > p {
       color: rgba(80, 80, 80, 0.6);
     }
-    .menu > h1 {
+    .menu > h2 {
       color: #333;
       font-size: 1.2vw;
       margin-top: 0.2vw;
       margin-bottom: 0;
     }
-    .menu > h2 {
+    .menu > h3 {
       font-size: 1vw;
       margin-top: 0.8vw;
-      margin-bottom: 0;
-    }
-    .menu > h3 {
-      color: #333;
-      font-size: 0.8vw;
-      margin-top: 0.2vw;
       margin-bottom: 0;
       text-transform: uppercase;
     }
@@ -443,22 +437,26 @@
       font-size: 0.7vw;
       font-style: italic;
     }
-    .menu > h3 > div {
-      width: 100%;
+    .menu > div {
+      width: 80%;
+      margin: 0 auto;
+      color: #333;
+      font-size: 0.8vw;
+      text-transform: uppercase;
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       border-bottom: 1px solid rgba(80, 80, 80, 0.2);
     }
-    .menu > h3 > div > span {
+    .menu > div > span {
       color: #333;
       margin-top: 0.07vw;
       max-width: 80%;
     }
-    .menu > h3 > div > span:nth-child(2) {
+    .menu > div > span:nth-child(2) {
       align-self: flex-end;
     }
-    #menu_right > .menu:first-child > h1 {
+    #menu_right > .menu:first-child > h2 {
       margin-top: 5.8vw;
     }
     #news_and_events {
@@ -472,11 +470,11 @@
       background-size: cover;
       background-position: 70% 0%;
     }
-    #news_and_events > h1 {
+    #news_and_events > h2 {
       font-size: 40px;
       color: #333;
     }
-    #news_and_events > h1 > span {
+    #news_and_events > h2 > span {
       font-size: 32px;
       vertical-align: text-top;
       margin-left: 8px;
@@ -493,13 +491,14 @@
     .news_text {
       width: 60%;
     }
-    .news_text > h2 {
+    .news_text > h3 {
       color: #333;
       font-size: 22px;
       margin-bottom: 0;
       flex-basis: 70%;
+      text-transform: uppercase;
     }
-    .news_text > h3 {
+    .news_text > h4 {
       font-size: 20px;
       margin-top: 10px;
       margin-bottom: 0;
@@ -550,7 +549,7 @@
       color: #fff;
       text-align: center;
     }
-    #planning_an_event > h1 {
+    #planning_an_event > h2 {
       font-size: 48px;
       margin-top: 5%;
     }
@@ -627,26 +626,27 @@
       width: 40vw;
       height: 40vw;
     }
-    #find_us > h1 {
+    #find_us > h2 {
       font-size: 2.2vw;
       margin-top: 8%;
       margin-bottom: 4%;
       margin-left: 45%;
       color: #333;
     }
-    #find_us > h1 > span {
+    #find_us > h2 > span {
       font-size: 1.8vw;
       vertical-align: text-top;
       margin-left: 0.5vw;
       color: #808080;
       text-decoration: underline;
     }
-    #find_us h2 {
+    #find_us h3 {
       font-size: 1.5vw;
       margin-left: 8%;
       color: #333;
+      text-transform: uppercase;
     }
-    #find_us h2 a:link, #find_us h2 a:visited, #find_us h2 a:hover, #find_us h2 a:focus, #find_us h2 a:active {
+    #find_us h3 a:link, #find_us h3 a:visited, #find_us h3 a:hover, #find_us h3 a:focus, #find_us h3 a:active {
       color: #333;
     }
     #find_us > .icon_rows {
@@ -756,38 +756,38 @@
    media
    ---------------------------------------------------------*/
 @media only screen and (min-width: 1501px) {
-  #about_jasons > h1 {
+  #about_jasons > h2 {
     font-size: 50px;
     margin-top: calc(8vw - 50px);
   }
-  #about_jasons > h1 > span {
+  #about_jasons > h2 > span {
     font-size: 40px;
   }
-  #about_jasons > h2 {
+  #about_jasons > h3 {
     font-size: 38px;
   }
   #about_jasons > p {
     font-size: 28px;
   }
-  #text_bg > h1 {
+  #text_bg > h2 {
     font-size: 20px;
   }
-  #food_menus_picture > h1 {
+  #food_menus_picture > h2 {
     font-size: 46px;
   }
-  #food_menus_picture > h1 > span {
+  #food_menus_picture > h2 > span {
     font-size: 38px;
   }
   .menu > i {
     font-size: 40px;
   }
-  .menu > h1 {
+  .menu > h2 {
     font-size: 20px;
   }
-  .menu > h2 {
+  .menu > h3 {
     font-size: 18px;
   }
-  .menu > h3 {
+  .menu > div {
     font-size: 16px;
   }
   .menu > p {
@@ -803,12 +803,12 @@
     padding-bottom: 5%;
     background-position: 50% 68%;
   }
-  #food_menus_picture > h1 {
+  #food_menus_picture > h2 {
     font-size: 5vw;
     margin: 0;
     align-self: center;
   }
-  #food_menus_picture > h1 > span {
+  #food_menus_picture > h2 > span {
     font-size: 4vw;
   }
   #food_menus {
@@ -819,25 +819,28 @@
   .menu > i {
     display: none;
   }
-  #menu_left > .menu > h1,#menu_left >  .menu > h2,#menu_left >  .menu > h3,#menu_left >  .menu > p {
-    margin-left: 20%;
+  #menu_left > .menu > h2,#menu_left >  .menu > h3,#menu_left >  .menu > p {
+    margin-left: 10%;
     margin-right: 10%;
   }
-  #menu_right > .menu > h1,#menu_right >  .menu > h2,#menu_right >  .menu > h3,#menu_right >  .menu > p {
+  #menu_right > .menu > h2,#menu_right >  .menu > h3,#menu_right >  .menu > p {
     margin-left: 10%;
-    margin-right: 20%;
+    margin-right: 10%;
   }
-  .menu > h1 {
+  #menu_left >  .menu > div,#menu_right >  .menu > div {
+    width: 76%;
+  }
+  .menu > h2 {
     font-size: 2vw;
     margin-top: 4vw;
     margin-bottom: 0;
   }
-  .menu > h2 {
+  .menu > h3 {
     font-size: 1.8vw;
     margin-top: 0.7vw;
     margin-bottom: 0;
   }
-  .menu > h3 {
+  .menu > div {
     color: #333;
     font-size: 1.4vw;
     margin-top: 0;
@@ -850,18 +853,18 @@
     margin-top: 0.2vw;
     margin-bottom: 0.2vw;
   }
-  .menu > h3 > div > span {
+  .menu > div > span {
     color: #333;
     margin-top: 0.07vw;
     max-width: 80%;
   }
-  #menu_right > .menu:first-child > h1 {
+  #menu_right > .menu:first-child > h2 {
     margin-top: 4vw;
   }
   .menu:nth-child(2) > h1 {
     margin-top: 1.2vw;
   }
-  #planning_an_event > h1 {
+  #planning_an_event > h2 {
     font-size: calc(3.2vw + 3px);
     margin-top: 5%;
   }
@@ -900,22 +903,22 @@
     width: 100%;
     height: 55vw;
   }
-  #about_jasons > h1, #about_jasons > h2, #about_jasons > p {
+  #about_jasons > h2, #about_jasons > h3, #about_jasons > p {
     margin-left: 10vw;
     margin-right: 10vw;
   }
-  #about_jasons > h1 {
+  #about_jasons > h2 {
     font-size: 4vw;
     margin-top: 6%;
   }
-  #about_jasons > h1 > span {
+  #about_jasons > h2 > span {
     font-size: 3.2vw;
     vertical-align: text-top;
     margin-left: 0.5vw;
     color: #808080;
     text-decoration: underline;
   }
-  #about_jasons > h2 {
+  #about_jasons > h3 {
     font-size: 3vw;
     margin-top: 2.3vw;
   }
@@ -931,7 +934,7 @@
     height: 5vw;
     background-color: rgb(120, 120, 120);
   }
-  #text_bg > h1 {
+  #text_bg > h2 {
     font-size: 2.6vw;
     margin-left: 10vw;
   }
@@ -942,10 +945,10 @@
     padding-bottom: 2%;
     margin-bottom: 4vw;
   }
-  #food_menus_picture > h1 {
+  #food_menus_picture > h2 {
     font-size: 6vw;
   }
-  #food_menus_picture > h1 > span {
+  #food_menus_picture > h2 > span {
     font-size: 4.8vw;
   }
   #menu_left {
@@ -955,37 +958,40 @@
     width: 100%;
     float: left;
   }
-  #menu_left > .menu > h1,#menu_left >  .menu > h2,#menu_left >  .menu > h3,#menu_left >  .menu > p {
+  #menu_left > .menu > h2,#menu_left >  .menu > h3,#menu_left >  .menu > p {
     margin-left: 10%;
     margin-right: 10%;
   }
-  #menu_right > .menu > h1,#menu_right >  .menu > h2,#menu_right >  .menu > h3,#menu_right >  .menu > p {
+  #menu_right > .menu > h2,#menu_right >  .menu > h3,#menu_right >  .menu > p {
     margin-left: 10%;
     margin-right: 10%;
   }
-  .menu > h1 {
+  #menu_left >  .menu > div,#menu_right >  .menu > div {
+    width: 76%;
+  }
+  .menu > h2 {
     font-size: 3.6vw;
     margin-top: 4vw;
   }
-  .menu > h2 {
+  .menu > h3 {
     font-size: 3.2vw;
     margin-top: 2vw;
     margin-bottom: 0;
   }
-  .menu > h3 {
+  .menu > div {
     font-size: 2.8vw;
     margin-top: 0;
   }
   .menu > p {
     font-size: 2vw;
   }
-  .menu > h3 > div > span {
+  .menu > div > span {
     max-width: 80%;
   }
-  #menu_right > .menu:first-child > h1 {
+  #menu_right > .menu:first-child > h2 {
     margin-top: 3vw;
   }
-  .menu:nth-child(2) > h1 {
+  .menu:nth-child(2) > h2 {
     margin-top: 3vw;
   }
   #news_and_events {
@@ -994,18 +1000,18 @@
   #specials, #events, #cocktails {
     width: 70%;
   }
-  #news_and_events > h1 {
+  #news_and_events > h2 {
     font-size: 4vw;
   }
-  #news_and_events > h1 > span {
+  #news_and_events > h2 > span {
     font-size: 3.4vw;
     margin-left: 0.5vw;
   }
-  .news_text > h2 {
+  .news_text > h3 {
     font-size: 3vw;
     margin-bottom: 0;
   }
-  .news_text > h3 {
+  .news_text > h4 {
     font-size: 2.8vw;
     margin-top: 0.3vw;
     margin-bottom: 0;
@@ -1042,19 +1048,20 @@
     width: 60%;
     height: 46vw;
   }
-  #find_us > h1 {
+  #find_us > h2 {
     font-size: 2.4vw;
     margin-top: 6%;
     margin-bottom: 3%;
     margin-left: 45%;
   }
-  #find_us > h1 > span {
+  #find_us > h2 > span {
     font-size: 2vw;
     margin-left: 0.5vw;
   }
-  #find_us h2 {
+  #find_us h3 {
     font-size: 1.7vw;
     margin-left: 8%;
+    text-transform: uppercase;
   }
   #find_us > .icon_rows {
     margin-left: 18%;
